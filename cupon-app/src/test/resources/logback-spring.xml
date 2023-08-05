@@ -11,7 +11,7 @@
         <appender-ref ref="STDOUT"/>
     </appender>
 
-    <logger name="com.meli.cupon" level="INFO"/>
+    <logger name="com.meli.login" level="INFO"/>
 
     <logger name="org.springframework" level="INFO"/>
     <logger name="com.twitter.finagle" level="INFO"/>
