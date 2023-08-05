@@ -8,7 +8,7 @@
 		<version>2.7.3</version>
 	</parent>
 
-	<artifactId>cupon</artifactId>
+	<artifactId>login</artifactId>
 	<groupId>com.meli</groupId>
 	<version>${revision}</version>
 	<packaging>pom</packaging>

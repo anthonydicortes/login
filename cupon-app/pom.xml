@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>cupon</artifactId>
+        <artifactId>login</artifactId>
         <groupId>com.meli</groupId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>cupon-app</artifactId>
+    <artifactId>login-app</artifactId>
 
     <name>COCuponService Application module</name>
     <description>Implementacion de CO Cupon API para encontrar la lista de items favoritos mas costosa que se puede comprar con un cupon sin superar su valor</description>
@@ -19,7 +19,7 @@
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
         <java.version>17</java.version>
-        <main-class>com.meli.Application</main-class>
+        <main-class>com.meli.Main</main-class>
         <wiremock-jre8.version>2.34.0</wiremock-jre8.version>
         <spring-webmvc.version>5.3.23</spring-webmvc.version>
         <spock-bom.version>2.1-groovy-3.0</spock-bom.version>
