@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: test
+  test:
+    mockmvc: YES
+
+
+server:
+  host: localhost

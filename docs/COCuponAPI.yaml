@@ -1,0 +1,69 @@
+openapi: 3.0.3
+info:
+  title: CO Cupon API
+  description: |-
+    Base java project
+  contact:
+    email: anthonydicortes@gmail.com
+  version: 1.0.0
+servers:
+  - url: TBD
+tags:
+  - name: Base
+    description: base java project
+paths:
+  /coupon:
+    post:
+      tags:
+        - pet
+      summary: Encuentra la lista de compra sugerida de mayor valor que se puede comprar con un cupon sin superar su valor
+      description: Encuentra la lista de compra sugerida de mayor valor que se puede comprar con un cupon sin superar su valor
+      operationId: obtenerListaDeCompraSugerida
+      requestBody:
+        description: Encuentra la lista de compra sugerida de mayor valor que se puede comprar
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ItemsFavoritosYCuponRequestDto'
+        required: true
+      responses:
+        '200':
+          description: Existe una lista de compra sugerida con al menos un producto que se puede comprar con el valor del cupon
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/requestBodies/ListaDeCompraSugeridaResponseDto'
+        '404':
+          description: El valor del cupon no es suficiente como para comprar al menos un item
+
+components:
+  schemas:
+    ItemsFavoritosYCuponRequestDto:
+      required:
+        - item_ids
+        - amount
+      type: object
+      properties:
+        item_ids:
+          type: array
+          items:
+            type: string
+          example: ["MLA1", "MLA2", "MLA3", "MLA4", "MLA5"]
+        amount:
+          type: integer
+          format: int
+          example: 500
+  requestBodies:
+    ListaDeCompraSugeridaResponseDto:
+      content:
+      type: object
+      properties:
+        item_ids:
+          type: array
+          items:
+            type: string
+          example: ["MLA1", "MLA2", "MLA3", "MLA4", "MLA5"]
+        total:
+          type: integer
+          format: int
+          example: 500
